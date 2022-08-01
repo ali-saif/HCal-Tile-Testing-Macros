@@ -1,0 +1,9 @@
+- For the weekly cosmic count plots, use the cosmicCounts.C macro. the root file lists with the previous week's tests are in the "cosmics-root-fiels" directory.
+
+- all-shapes-rootfiles.txt is for the plot containing cosmic counts for z05, z12, and b25. YOU MUST INSERT THE NEW ROOT FILES INTO THE LIST IN THE ORDER SEEN IN THE .TXT FILE. b25s, z05s, then z12s.
+
+- b25-rootfiles.txt is for the plot containing cosmic counts for only the b25 tests.
+
+- Instructions to run the cosmicCounts.C macro are inside the file in the commented out text at the top of the macro.
+
+- The PR plots for each shape is in the "newstand" directory. There is a README file there for those plots. 
