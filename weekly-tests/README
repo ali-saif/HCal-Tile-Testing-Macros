@@ -1,0 +1,9 @@
+These are the directions to run the code in this directory.
+
+1. edit .txt files containing each tiles' data to include the most up-to-date information.
+
+2. run t-graph with command below:
+
+   $ root -l t_graph.C
+
+3. save output as .pdf

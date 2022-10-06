@@ -1,0 +1,38 @@
+void t_graph()
+{
+  
+  TGraph* gr = new TGraph("z05-cosmic-count.txt");
+  TGraph* gr2 = new TGraph("z12-cosmic-count.txt");
+  TGraph* gr3 = new TGraph("b25-cosmic-count.txt");
+  
+  
+  gr -> SetMarkerStyle(8);
+  gr2 -> SetMarkerStyle(8);
+  gr3 -> SetMarkerStyle(8);
+
+  
+  gr -> SetMarkerColor(1);
+  gr2 -> SetMarkerColor(2);
+  gr3 -> SetMarkerColor(4);
+ 
+  
+  TLegend* leg = new TLegend();
+  leg -> SetTextSize(.05);
+  
+  leg -> AddEntry(gr,"Z05");
+  leg -> AddEntry(gr2,"Z12");
+  leg -> AddEntry(gr3,"B25");
+
+  
+  gr->Draw("ap");
+  leg -> Draw("samep");
+  gr2->Draw("samep");
+  gr3->Draw("samep");
+
+
+  gr -> SetTitle(";Week Number;Raw ADC Count");
+
+  gr -> GetYaxis() -> SetRangeUser(0,30000);
+  
+  leg -> SetBorderSize(0);
+}

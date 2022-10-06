@@ -1,0 +1,58 @@
+void t_graph()
+{
+  
+  TGraph* gr = new TGraph("1741data.txt");
+  TGraph* gr2 = new TGraph("1764data.txt");
+  TGraph* gr3 = new TGraph("1765data.txt");
+  TGraph* gr4 = new TGraph("1760data.txt");
+  TGraph* gr5 = new TGraph("1748data.txt");
+  TGraph* gr6 = new TGraph("1788data.txt");
+  TGraph* gr7 = new TGraph("1777data.txt");
+  TGraph* gr8 = new TGraph("746data.txt");
+  
+  gr -> SetMarkerStyle(4);
+  gr2 -> SetMarkerStyle(4);
+  gr3 -> SetMarkerStyle(4);
+  gr4 -> SetMarkerStyle(4);
+  gr5 -> SetMarkerStyle(8);
+  gr6 -> SetMarkerStyle(8);
+  gr7 -> SetMarkerStyle(8);
+  gr8 -> SetMarkerStyle(8);
+  
+  gr -> SetMarkerColor(1);
+  gr2 -> SetMarkerColor(2);
+  gr3 -> SetMarkerColor(3);
+  gr4 -> SetMarkerColor(4);
+  gr5 -> SetMarkerColor(1);
+  gr6 -> SetMarkerColor(2);
+  gr7 -> SetMarkerColor(3);
+  gr8 -> SetMarkerColor(4);
+  
+  TLegend* leg = new TLegend();
+  leg -> SetTextSize(.05);
+  
+  leg -> AddEntry(gr,"B25.616.1741");
+  leg -> AddEntry(gr2,"B25.624.1764");
+  leg -> AddEntry(gr3,"B25.624.1765");
+  leg -> AddEntry(gr4,"B25.622.1760");
+  leg -> AddEntry(gr5,"B25.618.1748");
+  leg -> AddEntry(gr6,"B25.632.1788");
+  leg -> AddEntry(gr7,"B25.628.1777");
+  leg -> AddEntry(gr8,"B25.281.746");
+  
+  gr->Draw("ap");
+  leg -> Draw("samep");
+  gr2->Draw("samep");
+  gr3->Draw("samep");
+  gr4->Draw("samep");
+  gr5->Draw("samep");
+  gr6->Draw("samep");
+  gr7->Draw("samep");
+  gr8->Draw("samep");
+
+  gr -> SetTitle(";Week Number;PR");
+
+  gr -> GetYaxis() -> SetRangeUser(0,1.3);
+  
+  leg -> SetBorderSize(0);
+}
