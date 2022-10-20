@@ -1,0 +1,11 @@
+1) Make a directory for the backup of the eLog, GSU data, and Uniplast data. 
+2) Put the backup scripts in their respective directories (backup.sh, backup_gsu.sh, and transfer.sh). You can nano into them to see what they're backing up. 
+3) Edit the scripts so that they point to the right places on your computer, RCF, and phynp6. You'll need to make the target directories on RCF and phynp6
+4) Open the crontab text file, edit it so that all the links point to the right places. 
+5) There are also some log files to make. Just touch them into existence. 
+5) Copy the crontab text file to /etc/ (probably need to sudo). There's one already in there, we're just overriding it with a new one. 
+
+The only cron-based commands you should need are:
+
+crontab -e (edits /etc/crontab)
+crontab -l (lists what's in /etc/crontab/)
